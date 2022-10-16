@@ -1,16 +1,16 @@
-# cadastro_clientes
 
-A new Flutter project.
+# Clients App
 
-## Getting Started
+Com base no [desafio dart](https://github.com/josemailson/desafio-dart) onde foi criado um programa de cadastro de clientes, foi realizada uma aplicação com Flutter. Um sistema de cadastramento de dados de clientes.
+## Authors
 
-This project is a starting point for a Flutter application.
+- [@josemailson](https://github.com/josemailson)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Demo
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Splash do App com logo
+
+![img](https://github.com/josemailson/desafio-dart-com-flutter/blob/main/assets/gifs/Logotipo-Clients.gif?raw=true) 
+
+1. Login Page
