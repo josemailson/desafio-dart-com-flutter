@@ -13,13 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
-      home: const SplashPage(),
-      routes: {
-        'splash': (context) => const SplashPage(),
-        'login': (context) => const LoginPage(),
-      },
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: MyColor.black,
+        )),
+        home: const SplashPage(),
+        routes: {
+          'splash': (context) => const SplashPage(),
+          'login': (context) => const LoginPage(),
+        });
   }
 }
