@@ -15,4 +15,8 @@ Splash do App com logo
 
 1. Login Page
 
-![img](https://github.com/josemailson/desafio-dart-com-flutter/blob/main/assets/images/login-page.png?raw=true) 
+![img](https://github.com/josemailson/desafio-dart-com-flutter/blob/main/assets/images/login-page.png?raw=true)
+
+2. Home Page
+
+![img](https://github.com/josemailson/desafio-dart-com-flutter/blob/main/assets/images/home-page.png?raw=true)
