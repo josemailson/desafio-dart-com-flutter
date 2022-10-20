@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
 import 'features/authentication/login_page.dart';
 import 'features/authentication/splash.dart';
 import 'features/design_system/my_color.dart';
-import 'features/design_system/text_theme.dart';
+import 'home/home.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,13 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: MyColor.black,
-        )),
+            colorScheme: ColorScheme.fromSwatch()
+                .copyWith(primary: MyColor.black, secondary: MyColor.black)),
         home: const SplashPage(),
         routes: {
           'splash': (context) => const SplashPage(),
           'login': (context) => const LoginPage(),
+          'home': (context) => const HomePage(),
         });
   }
 }

@@ -63,6 +63,9 @@ flutter:
   assets:
     - assets/gifs/Logotipo-Clients.gif
     - assets/images/Logotipo-Clients-horizontal-claro.png
+    - assets/images/paesedoces.png
+    - assets/images/telas.png
+    - assets/images/aegfinanceira.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
