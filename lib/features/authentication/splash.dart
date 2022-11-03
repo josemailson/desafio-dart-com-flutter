@@ -1,3 +1,4 @@
+import 'package:cadastro_clientes/features/authentication/login_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -11,22 +12,16 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    print('dependeee');
     Future.delayed(const Duration(seconds: 3)).then((value) {
-      Navigator.of(context).pushReplacementNamed('login');
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (BuildContext context) => const LoginPage(),
+      ));
     });
   }
 
   @override
   void didUpdateWidget(covariant SplashPage oldWidget) {
     super.didUpdateWidget(oldWidget);
-    print('didUpdateWidget');
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    print('didChangeDependencies');
   }
 
   @override

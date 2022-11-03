@@ -1,16 +1,10 @@
+import 'package:cadastro_clientes/home/home.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import '../design_system/my_color.dart';
 
 class LoginPage extends StatelessWidget {
-  static const routeName = '/login';
   const LoginPage({super.key});
-
-  void onPressed() {
-    print('outrooo clicou');
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +55,9 @@ class LoginPage extends StatelessWidget {
             height: screenHeight * 0.073,
             child: ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed('home');
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (BuildContext context) => const HomePage(),
+                  ));
                 },
                 style: ButtonStyle(
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
