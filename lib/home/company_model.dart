@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 class CompanyModel {
@@ -58,6 +59,7 @@ class CompanyModel {
     String? logradouro,
     String? numero,
     List<Cnae>? cnaes,
+    String? id,
   }) {
     return CompanyModel(
       cnpj ?? this.cnpj,
@@ -66,6 +68,7 @@ class CompanyModel {
       logradouro ?? this.logradouro,
       numero ?? this.numero,
       cnaes ?? this.cnaes,
+      id ?? this.id,
     );
   }
 }
