@@ -25,41 +25,47 @@ class _RegistrationPageState extends State<RegistrationPage> {
     return Scaffold(
       appBar: AppBar(),
       body: Form(
-          child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              TextFormField(
-                keyboardType: TextInputType.number,
-                controller: cnpjController,
-                inputFormatters: [cnpjMask],
-                decoration: const InputDecoration(hintText: 'CNPJ'),
-                onFieldSubmitted: (value) {
-                  homeController.getCompany(value);
-                },
-              ),
-              TextFormField(
-                controller: razaoController,
-                decoration: const InputDecoration(hintText: 'Razão Social'),
-              ),
-              const SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: () {
-                  homeController.createCompany(CompanyModel(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                TextFormField(
+                  keyboardType: const TextInputType.numberWithOptions(
+                    signed: true,
+                  ),
+                  textInputAction: TextInputAction.send,
+                  controller: cnpjController,
+                  inputFormatters: [cnpjMask],
+                  decoration: const InputDecoration(hintText: 'CNPJ'),
+                  onFieldSubmitted: (value) async {
+                    final company = await homeController.getCompany(value);
+                    razaoController.text = company!.razaoSocial;
+                  },
+                ),
+                TextFormField(
+                  controller: razaoController,
+                  decoration: const InputDecoration(hintText: 'Razão Social'),
+                ),
+                const SizedBox(height: 16),
+                ElevatedButton(
+                  onPressed: () {
+                    homeController.createCompany(CompanyModel(
                       cnpjController.text,
                       razaoController.text,
                       'fantasia',
                       'logradouro',
                       '1',
-                      [Cnae(1, 'cnae1')]));
-                },
-                child: const Text('Cadastrar'),
-              )
-            ],
+                      [Cnae(1, 'cnae1')],
+                    ));
+                  },
+                  child: const Text('Cadastrar'),
+                ),
+              ],
+            ),
           ),
         ),
-      )),
+      ),
     );
   }
 }

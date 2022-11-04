@@ -23,4 +23,13 @@ class HomeController {
     final result = await homeRepository.createCompany(newCompany);
     print(result);
   }
+
+  Future<List<CompanyModel>> getCompanies() async {
+    final result = await homeRepository.getCompanies();
+    return result;
+  }
+
+  Future<bool> deleteCompany(String id) async {
+    return await homeRepository.deleteCompany(id);
+  }
 }

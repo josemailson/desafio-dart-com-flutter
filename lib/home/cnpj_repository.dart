@@ -29,9 +29,7 @@ class CnpjRepositoryDio implements CnpjRepository {
       ),
     );
     final response = await dio.get('/cnpj/v1/$cnpj');
-    print(response.data);
     final company = CompanyModel.fromMap(response.data);
-    print(company);
     return company;
   }
 }
