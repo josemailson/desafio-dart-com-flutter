@@ -5,6 +5,8 @@ import 'package:cadastro_clientes/home/home_repository.dart';
 import 'package:cadastro_clientes/registration/registration_page.dart';
 import 'package:flutter/material.dart';
 
+import '../features/design_system/my_color.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -18,6 +20,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch()
+              .copyWith(primary: MyColor.black, secondary: MyColor.black)),
       home: Builder(
         builder: (context) => Scaffold(
           appBar: AppBar(
