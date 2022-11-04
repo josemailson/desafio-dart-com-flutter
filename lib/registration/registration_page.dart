@@ -5,6 +5,8 @@ import 'package:cadastro_clientes/home/home_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:mask_input_formatter/mask_input_formatter.dart';
 
+import '../home/home.dart';
+
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
 
@@ -58,6 +60,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       '1',
                       [Cnae(1, 'cnae1')],
                     ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage())).then((_) {
+                      setState(() {});
+                    });
                   },
                   child: const Text('Cadastrar'),
                 ),
